@@ -2,59 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
-  <title>Frontend Mentor | News homepage</title>
+  <title>News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+  <header class="header">
+    <nav class="nav container" id="nav">
+      <img src="./assets/images/logo.svg" alt="Logo W" class="nav__logo">
 
-  The Bright Future of Web 3.0?
+      <ul class="nav__links">
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+        <li class="ul__li"><a href="#" class="li__a">Home</a></li>
+        <li class="ul__li"><a href="#" class="li__a">New</a></li>
+        <li class="ul__li"><a href="#" class="li__a">Popular</a></li>
+        <li class="ul__li"><a href="#" class="li__a">Trending</a></li>
+        <li class="ul__li"><a href="#" class="li__a">Categories</a></li>
 
-  Read more
+      </ul>
 
-  New 
+      <a href="#nav" class="nav__hamburguer"><img src="./assets/images/icon-menu.svg" alt="Icono Hamburguesa" class="nav__icon"></a>
+      <a href="#" class="nav__close"><img src="./assets/images/icon-menu-close.svg" alt="Icono Close" class="nav__icon"></a>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+    </nav>
+  </header>
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
+  <main class="container">
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+    <div class="imagen">
+      <div class="imagen__img"></div>
+    </div>
 
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+    <div class="info">
+      <h2 class="info__h2">The Bright Future of Web 3.0?</h2>
+      <div class="info__paragrap">
+        <p class="info__p">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?</p>
+          <button class="info__button">Read more</button>
+      </div>
+    </div>
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
+    <div class="new">
+      <h3 class="new__h3">New</h3>
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
+      <article class="new__article">
+        <h4 class="article__h4">Hydrogen VS Electric Cars</h4>
+        <p class="article__p">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </article>
+
+      <article class="new__article">
+        <h4 class="article__h4">The Downsides of AI Artistry</h4>
+        <p class="article__p">What are the possible adverse effects of on-demand AI image generation?</p>
+      </article>
+
+      <article class="new__article">
+        <h4 class="article__h4">Is VC Funding Drying Up?</h4>
+        <p class="article__p">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </article>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="">
+        <div class="card__info">
+          <h5 class="card__h5">01</h5>
+          <span>Reviving Retro PCs</span>
+          <p class="card__p">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="./assets/images/image-top-laptops.jpg" alt="">
+        <div class="card__info">
+          <h5 class="card__h5">02</h5>
+          <span>Top 10 Laptops of 2022</span>
+          <p class="card__p">Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="">
+        <div class="card__info">
+          <h5 class="card__h5">03</h5>
+          <span>The Growth of Gaming</span>
+          <p class="card__p">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://gaston-recalde-portafolio.netlify.app/">Gastón Recalde</a>. -->
   </div>
 </body>
 </html>
