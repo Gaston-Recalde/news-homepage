@@ -106,16 +106,13 @@ body{
     font-weight: 700;
 }
 
-
-
-
-/* Inifio de la GRID */
-
-
+main{
+    display: grid;
+    gap: 2rem;
+}
 
 .imagen{
     height: 300px;
-    margin-bottom: 2rem;
 }
 
 .imagen__img{
@@ -126,14 +123,10 @@ body{
     height: 100%;
 }
 
-
-
-
 .info{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-bottom: 4rem;
 }
 
 .info__h2{
@@ -144,7 +137,6 @@ body{
 .info__p{
     color: var(--dark-grayish-blue);
     font-weight: 700;
-    /* letter-spacing: 1.1px; */
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 1rem;
@@ -166,12 +158,9 @@ body{
     background-color: var(--very-dark-blue);
 }
 
-
-
 .new{
     padding: 1.2rem;
     background-color: var(--very-dark-blue);
-    margin-bottom: 4rem;
 }
 
 .new__h3{
@@ -207,17 +196,10 @@ body{
     line-height: 1.7;
 }
 
-/* .article__p:last-child{
-    margin-bottom: 0;
-} */
-
-
-
 .cards{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 5rem;
 }
 
 .card{
@@ -257,10 +239,6 @@ body{
     line-height: 1.7;
 }
 
-
-
-
-
 @media (min-width:768px) {
     .nav{
         --state-close: scale(0);
@@ -293,18 +271,75 @@ body{
     .imagen__img{
         background-image: url('./assets/images/image-web-3-desktop.jpg');
     } 
+
+    .info{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .info__h2{
+        font-size: 3rem;
+    }
+    
+    .info__p{
+        font-size: 15px;
+    }
+    
+    .info__button{
+        padding: 1rem 1.8rem;
+    }
+
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .card{
+        gap: 1rem;
+        max-width: 337px;
+    }
+    
 }
 
 
+@media (min-width:1024px){
+    main{
+        display: grid;
+        gap: 2rem;
+        grid-template-areas: 
+        'imagen imagen new'
+        'info   info   new'
+        'card   card   card';
+    }
 
+    .imagen{
+        grid-area: imagen;
+    }
 
+    .new{
+        grid-area: new;
+        max-width: 339px;
+    }
 
+    .info{
+        grid-area: info;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
 
+    .cards{
+        grid-area: card;
+        justify-content: space-between;
+    }
+}
 
+@media (min-width:1440px){
+    .info{
+        gap: 2rem;
+    }
+}
 
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 13px; text-align: center; margin: 2rem 0; }
+.attribution a { color: hsl(228, 45%, 44%); font-weight: bold;}
