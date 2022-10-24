@@ -18,6 +18,7 @@
     list-style: none;
     text-decoration: none;
     border-style: none;
+    overflow: hidden;
 }
 
 body{
@@ -61,10 +62,13 @@ body{
     grid-column: -2/-1;
     grid-row: 1/2;
     transition: .4s transform;
+    position: fixed;
+    right: 5%;
 }
 
 .nav__hamburguer{
     transform: var(--state-hamburguer);
+    position: absolute;
 }
 
 .nav__close{
@@ -78,10 +82,10 @@ body{
 
 .nav__links{
     background-color: #ccc;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 35%;
     right: 0;
 
     display: grid;
