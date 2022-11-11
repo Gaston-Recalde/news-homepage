@@ -49,6 +49,9 @@ body{
     --state-menu:translate(0);
     --state-close: scale(1);
     --state-hamburguer: scale(0);
+
+    position: fixed;
+    margin: 0 5%;
 }
 
 .nav__logo{
@@ -78,7 +81,8 @@ body{
 
 .nav__links{
     background-color: #ccc;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -90,7 +94,7 @@ body{
     padding-left: 5%;
 
     transform: var(--state-menu);
-    transition: .3s transform;
+    transition: .0s transform;
 }
 
 .li__a{
