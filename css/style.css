@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  font-weight: bold;
+}
+
+.header__nav {
+  --state-close: scale(0);
+  --state-hamburger: scale(1);
+  --state-menu: translate(100%);
+  padding: 40px 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  z-index: 999;
+}
+.header__nav:target {
+  --state-close: scale(1);
+  --state-hamburger: scale(0);
+  --state-menu: translate(0);
+  margin: 0 5%;
+}
+.header__nav .nav__logo {
+  font-size: 2.5rem;
+  z-index: 1000;
+}
+.header__nav .nav__hamburger, .header__nav .nav__close {
+  cursor: pointer;
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  transition: 0.4s transform;
+}
+.header__nav .nav__hamburger {
+  transform: var(--state-hamburger);
+}
+.header__nav .nav__close {
+  transform: var(--state-close);
+}
+.header__nav .nav__icon {
+  width: 30px;
+  height: 30px;
+}
+.header__nav .nav__links {
+  background-color: #ccc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding-left: 5%;
+  transform: var(--state-menu);
+  transition: 0s transform;
+}
+.header__nav .nav__links .li__a {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: hsl(240deg, 100%, 5%);
+  font-weight: 400;
+}
+.header__nav .nav__links .li__a:hover {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+}
+main .imagen {
+  height: 300px;
+}
+main .imagen__img {
+  background-image: url("/assets/images/image-web-3-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+main .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .info__h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+main .info__paragrap .info__p {
+  color: hsl(236deg, 13%, 42%);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+main .info__paragrap .info__button {
+  background-color: hsl(5deg, 85%, 63%);
+  padding: 1rem 1.5rem;
+  color: hsl(36deg, 100%, 99%);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main .info__paragrap .info__button:hover {
+  cursor: pointer;
+  color: hsl(36deg, 100%, 99%);
+  background-color: hsl(240deg, 100%, 5%);
+}
+main .new {
+  padding: 1.2rem;
+  background-color: hsl(240deg, 100%, 5%);
+}
+main .new__h3 {
+  color: hsl(35deg, 77%, 62%);
+  font-weight: 700;
+  font-size: 2rem;
+}
+main .new__article {
+  margin: 2rem 0 2rem;
+  border-bottom: 1px solid hsl(233deg, 8%, 79%);
+}
+main .new__article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+main .new__article .article__h4 {
+  color: hsl(36deg, 100%, 99%);
+  font-size: 1.2rem;
+}
+main .new__article .article__h4:hover {
+  cursor: pointer;
+  color: hsl(35deg, 77%, 62%);
+}
+main .new__article .article__p {
+  color: hsl(236deg, 13%, 42%);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+main .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .cards .card {
+  display: flex;
+  gap: 1.5rem;
+}
+main .cards .card__img {
+  height: 120px;
+}
+main .cards .card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .cards .card__info .info__h5 {
+  font-size: 2rem;
+  color: hsl(233deg, 8%, 79%);
+}
+main .cards .card__info .info__span {
+  color: hsl(240deg, 100%, 5%);
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+main .cards .card__info .info__span:hover {
+  cursor: pointer;
+  color: hsl(5deg, 85%, 63%);
+}
+main .cards .card__info .info__p {
+  color: hsl(233deg, 8%, 79%);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    --state-close: scale(0);
+    --state-hamburger: scale(0);
+    --state-menu: translate(0);
+  }
+  .header__nav:target {
+    --state-close: scale(0);
+  }
+  .header__nav .nav__links {
+    padding: 0;
+    background-color: unset;
+    position: unset;
+    gap: 1.5rem;
+    grid-auto-flow: column;
+    transform: unset;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+  }
+  .header__nav .nav__links .li__a {
+    font-size: 1rem;
+    letter-spacing: none;
+  }
+  main .imagen__img {
+    background-image: url("/assets/images/image-web-3-desktop.jpg");
+  }
+  main .info {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  main .info__h1 {
+    font-size: 3rem;
+  }
+  main .info__p {
+    font-size: 15px;
+  }
+  main .info__button {
+    padding: 1rem 1.8rem;
+  }
+  main .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  main .cards .card {
+    gap: 1rem;
+    max-width: 337px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: "imagen imagen new" "info   info   new" "card   card   card";
+  }
+  main .imagen {
+    grid-area: imagen;
+  }
+  main .new {
+    grid-area: new;
+    max-width: 339px;
+  }
+  main .info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  main .cards {
+    grid-area: card;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .info {
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
