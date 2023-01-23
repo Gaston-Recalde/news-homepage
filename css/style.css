@@ -143,7 +143,7 @@ main .new {
   padding: 1.2rem;
   background-color: hsl(240deg, 100%, 5%);
 }
-main .new__h3 {
+main .new__h2 {
   color: hsl(35deg, 77%, 62%);
   font-weight: 700;
   font-size: 2rem;
@@ -156,11 +156,11 @@ main .new__article:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
-main .new__article .article__h4 {
+main .new__article .article__h3 {
   color: hsl(36deg, 100%, 99%);
   font-size: 1.2rem;
 }
-main .new__article .article__h4:hover {
+main .new__article .article__h3:hover {
   cursor: pointer;
   color: hsl(35deg, 77%, 62%);
 }
@@ -187,7 +187,7 @@ main .cards .card__info {
   flex-direction: column;
   justify-content: space-between;
 }
-main .cards .card__info .info__h5 {
+main .cards .card__info .info__h4 {
   font-size: 2rem;
   color: hsl(233deg, 8%, 79%);
 }

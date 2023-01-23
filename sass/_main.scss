@@ -78,7 +78,7 @@
 main{
     display: grid;
     gap: 2rem;
-    
+
     .imagen{
         height: 300px;
 
@@ -133,7 +133,7 @@ main{
         padding: 1.2rem;
         background-color: $very-dark-blue;
 
-        &__h3{
+        &__h2{
             color: $soft-orange;
             font-weight: 700;
             font-size: 2rem;
@@ -148,7 +148,7 @@ main{
                 margin-bottom: 0;
             }
 
-            .article__h4{
+            .article__h3{
                 color: $off-white;
                 font-size: 1.2rem;
 
@@ -185,7 +185,7 @@ main{
                 flex-direction: column;
                 justify-content: space-between;
 
-                .info__h5{
+                .info__h4{
                     font-size: 2rem;
                     color: $grayish-blue;
                 }
